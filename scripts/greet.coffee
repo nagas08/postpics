@@ -23,4 +23,5 @@ module.exports = (robot) ->
 
 module.exports = (robot) ->
   robot.hear /(おはよう)/i, (msg) ->
-    msg.send "https://www.dropbox.com/s/u3hssnlg8okdvsc/%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8B%E3%81%9E%E3%81%84.jpg?dl=0"
+
+    msg.send 'https://www.dropbox.com/s/u3hssnlg8okdvsc/%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8B%E3%81%9E%E3%81%84.jpg?dl=0'
