@@ -20,3 +20,7 @@ module.exports = (robot) ->
 
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございます！"
+
+module.exports = (robot) ->
+  robot.hear /(おはよう)/i, (msg) ->
+    msg.send "おはようございます！"
