@@ -39,8 +39,3 @@ module.exports = (robot) ->
   robot.hear /バルス/i, (msg) ->
     msg.send (msg.random b_urls)
 
-  robot.enter (res) ->
-    res.send res.random enterReplies
-  robot.leave (res) ->
-    res.send res.random leaveReplies
-
