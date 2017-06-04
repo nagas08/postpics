@@ -33,12 +33,9 @@ module.exports = (robot) ->
   robot.hear /(TEST)/i, (msg) ->
     msg.send "TEST Response."
     data =
-      attatchments: [
+      attachments: [
         color: "00ff00"
-        fallback: "Sumally ....."
-        title: "Title...."
-        text: "Body ......."
-        mrkdwn_in: ["text"]
+        mrkdwn_in: ['text']
         ]
     msg.send data
 
