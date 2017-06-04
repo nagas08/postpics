@@ -32,11 +32,12 @@ module.exports = (robot) ->
 
   robot.hear /(TEST)/i, (msg) ->
     data =
-      content:
+      attatchments: [
         color: "00ff00"
         fallback: "Sumally ....."
         title: "Title...."
         text: "Body ......."
         mrkdwn_in: ["text"]
+        ]
     msg.send data
 
