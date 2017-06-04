@@ -29,3 +29,18 @@ module.exports = (robot) ->
 
   robot.hear /(がんば)/i, (msg) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
+
+  robot.hear /(123)/i, (msg) ->
+    data =
+      content:
+        color: "00ff00"
+        fallback: "Sumally ....."
+        title: "Title...."
+        title_link: "htto://example.com"
+        text: "Body ......."
+        mrkdwn_in: ["text"]
+      channel: msg.envelope.room
+      username: "bot_name"
+      icon_emoji: ":emoji:"
+    robot.emit "slack.attachment", data
+
