@@ -34,9 +34,9 @@ module.exports = (robot) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
 
   robot.hear /バルス/i, (msg) ->
-    msg.send('https://gifmagazine.net/gifs/7175?locale=ja')
+    msg.send('https://img.gifmagazine.net/gifmagazine/31mediatumblrcom53b05ec3ced1c13aa36bad91fe56350f_tumblr_my0eldEcGa1rs6argo1_400.gif')
     setTimeout ->
-      msg.send('https://gifmagazine.net/gifs/7008?locale=ja')
+      msg.send('https://img.gifmagazine.net/gifmagazine/24mediatumblrcom8c3cbad95fef7dcab76831d7eaa11eb0_tumblr_mxwo5q2HVL1rs6argo1_400.gif')
     , 3000
 
 
