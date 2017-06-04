@@ -17,11 +17,13 @@
 #   Nagayuki Shimizu
 
 fs = require 'fs'
-urls = JSON.parse(fs.readFileSync('goa.json', 'utf8'))
+urls = JSON.parse(fs.readFileSync('pic_all.json', 'utf8'))
+m_urls = JSON.parse(fs.readFileSync('morning.json', 'utf8'))
 
 module.exports = (robot) ->
 
-  robot.respond /おはよう/i, (msg) ->
+  robot.hear /おはよう/i, (msg) ->
+    msg.send (msg.random m_urls)
     msg.send "おはようございます！"
 
   robot.respond /goa/i, (msg) ->
@@ -29,13 +31,4 @@ module.exports = (robot) ->
 
   robot.hear /(がんば)/i, (msg) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
-
-  robot.respond /(TE)/i, (msg) ->
-    msg.send "TEST Response."
-    data =
-      attachments: [
-        color: "00ff00"
-        mrkdwn_in: ['text']
-        ]
-    msg.send data
 
