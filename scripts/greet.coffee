@@ -20,6 +20,7 @@ fs = require 'fs'
 urls = JSON.parse(fs.readFileSync('pic_all.json', 'utf8'))
 m_urls = JSON.parse(fs.readFileSync('morning.json', 'utf8'))
 
+
 module.exports = (robot) ->
 
   robot.hear /おはよう/i, (msg) ->
@@ -31,4 +32,11 @@ module.exports = (robot) ->
 
   robot.hear /(がんば)/i, (msg) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
+
+  robot.hear /バルス/i, (msg) ->
+    msg.send('https://gifmagazine.net/gifs/7175?locale=ja')
+    setTimeout ->
+      msg.send('https://gifmagazine.net/gifs/7008?locale=ja')
+    , 3000
+
 
