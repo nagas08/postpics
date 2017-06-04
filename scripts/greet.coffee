@@ -26,3 +26,6 @@ module.exports = (robot) ->
 
   robot.respond /goa/i, (msg) ->
     msg.send (msg.random urls)
+
+  robot.hear '/(がんば)/i', (msg) ->
+    msg.send('https://www.dropbox.com/s/u3hssnlg8okdvsc/%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8B%E3%81%9E%E3%81%84.jpg')
