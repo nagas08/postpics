@@ -28,4 +28,4 @@ module.exports = (robot) ->
     msg.send (msg.random urls)
 
   robot.hear /(がんば)/i, (msg) ->
-    msg.send('https://drive.google.com/open?id=0B41mG7e9EVwzWW5SUXI5WDE2Um8')
+    msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
