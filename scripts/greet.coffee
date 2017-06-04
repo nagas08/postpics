@@ -21,6 +21,8 @@ urls = JSON.parse(fs.readFileSync('pic_all.json', 'utf8'))
 m_urls = JSON.parse(fs.readFileSync('morning.json', 'utf8'))
 b_urls = JSON.parse(fs.readFileSync('balus.json', 'utf8'))
 
+enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
 
 module.exports = (robot) ->
 
@@ -36,3 +38,9 @@ module.exports = (robot) ->
 
   robot.hear /バルス/i, (msg) ->
     msg.send (msg.random b_urls)
+
+  robot.enter (res) ->
+    res.send res.random enterReplies
+  robot.leave (res) ->
+    res.send res.random leaveReplies
+
