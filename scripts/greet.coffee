@@ -31,6 +31,7 @@ module.exports = (robot) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
 
   robot.hear /(TEST)/i, (msg) ->
+    msg.send "TEST Response."
     data =
       attatchments: [
         color: "00ff00"
