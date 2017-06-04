@@ -30,13 +30,12 @@ module.exports = (robot) ->
   robot.hear /(がんば)/i, (msg) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
 
-  robot.hear /(123)/i, (msg) ->
+  robot.hear /(TEST)/i, (msg) ->
     data =
       content:
         color: "00ff00"
         fallback: "Sumally ....."
         title: "Title...."
-        title_link: "https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg"
         text: "Body ......."
         mrkdwn_in: ["text"]
     robot.emit "slack.attachment", data
