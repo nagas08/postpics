@@ -38,5 +38,5 @@ module.exports = (robot) ->
         title: "Title...."
         text: "Body ......."
         mrkdwn_in: ["text"]
-    robot.emit "slack.attachment", data
+    msg.send data
 
