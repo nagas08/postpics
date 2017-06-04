@@ -30,7 +30,7 @@ module.exports = (robot) ->
   robot.hear /(がんば)/i, (msg) ->
     msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
 
-  robot.hear /(TEST)/i, (msg) ->
+  robot.respond /(TE)/i, (msg) ->
     msg.send "TEST Response."
     data =
       attachments: [
