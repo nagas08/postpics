@@ -20,6 +20,7 @@ fs = require 'fs'
 urls = JSON.parse(fs.readFileSync('pic_all.json', 'utf8'))
 m_urls = JSON.parse(fs.readFileSync('morning.json', 'utf8'))
 b_urls = JSON.parse(fs.readFileSync('balus.json', 'utf8'))
+zoi_urls = JSON.parse(fs.readFileSync('zoi.json', 'utf8'))
 
 enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
 leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
@@ -34,7 +35,7 @@ module.exports = (robot) ->
     msg.send (msg.random urls)
 
   robot.hear /(がんば)/i, (msg) ->
-    msg.send('https://dl.dropboxusercontent.com/sh/3h4poeiui7vcbkt/AABTP7JSqp5qCVQ-MhaO8SBWa/%EF%BC%81%EF%BC%81.jpg')
+    msg.send(msg.random zoi_urls)
 
   robot.hear /バルス/i, (msg) ->
     msg.send (msg.random b_urls)
