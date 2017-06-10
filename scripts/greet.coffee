@@ -27,7 +27,7 @@ leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
 
 module.exports = (robot) ->
 
-  robot.hear /(おは||おはよう)/i, (msg) ->
+  robot.hear /(おは.*)/i, (msg) ->
     msg.send (msg.random m_urls)
     msg.send "おはようございます！"
 
